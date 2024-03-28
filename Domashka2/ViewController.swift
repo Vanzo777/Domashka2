@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class ViewController: UIViewController {
+    
     
     private lazy var cardView: UIView = {
         let view = UIView()
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
             cardView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
             cardView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
             cardView.heightAnchor.constraint(equalToConstant: 400),
-
+            
             rateLabel.centerXAnchor.constraint(equalTo: cardView.centerXAnchor),
             rateLabel.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 50),
             
@@ -104,18 +104,11 @@ class ViewController: UIViewController {
         ])
     }
     @objc func loveTapped (_ sender: UIButton) {
-       let love = ViewController()
+        let love = ViewController()
         print("##")
     }
     @objc func hateTapped (_ sender: UIButton) {
-       let hate = ViewController()
+        let hate = ViewController()
         print("##")
     }
-    
-    
 }
-
-#Preview(traits: .portrait, body:{
-    ViewController()
-})
-
